@@ -43,6 +43,12 @@ abstract class AppLinksPlatform extends PlatformInterface {
         'getInitialAppLink() not implemented on the current platform.',
       );
 
+  /// Resets the initial / first link
+  /// returns [void]
+  Future<void> resetInitialAppLink() => throw UnimplementedError(
+        'resetInitialAppLink() not implemented on the current platform.',
+      );
+
   /// Gets the initial / first link
   /// returns [Uri] as String or [null]
   Future<String?> getInitialAppLinkString() => throw UnimplementedError(

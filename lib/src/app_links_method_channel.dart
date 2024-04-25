@@ -18,10 +18,20 @@ class AppLinksMethodChannel extends AppLinksPlatform {
   /// [getLatestAppLink] method call name
   static const String _getLatestAppLinkMethod = 'getLatestAppLink';
 
+  /// [resetInitialAppLink] method call name
+  static const String _resetInitialAppLinkMethod = 'resetInitialAppLink';
+
   @override
   Future<Uri?> getInitialAppLink() async {
     final result = await getInitialAppLinkString();
     return result != null ? Uri.tryParse(result) : null;
+  }
+
+  @override
+  Future<void> resetInitialAppLink() async {
+    final link =
+        await _method.invokeMethod<String?>(_resetInitialAppLinkMethod);
+    return null;
   }
 
   @override

@@ -16,6 +16,11 @@ class AppLinksPluginWeb extends AppLinksPlatform {
   }
 
   @override
+  Future<void> resetInitialAppLink() async {
+    return null;
+  }
+
+  @override
   Future<String?> getInitialAppLinkString() async {
     return _initialLink;
   }

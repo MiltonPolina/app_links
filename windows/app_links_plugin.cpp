@@ -86,6 +86,11 @@ namespace applinks
 		{
 			result->Success(flutter::EncodableValue(latestLink_.value_or("")));
 		}
+		else if (method_call.method_name().compare("resetInitialAppLink") == 0)
+		{
+			latestLink_ = std::nullopt;
+			result->Success(nullptr);
+		}
 		else
 		{
 			result->NotImplemented();

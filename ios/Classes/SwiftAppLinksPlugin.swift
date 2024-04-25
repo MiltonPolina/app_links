@@ -30,6 +30,9 @@ public final class SwiftAppLinksPlugin: NSObject, FlutterPlugin, FlutterStreamHa
       result(initialLink)
     case "getLatestAppLink":
       result(latestLink)
+    case "resetInitialAppLink":
+      resetInitialAppLink()
+      result(nil)
     default:
       result(FlutterMethodNotImplemented)
     }
@@ -117,5 +120,9 @@ public final class SwiftAppLinksPlugin: NSObject, FlutterPlugin, FlutterStreamHa
     }
     
     _eventSink(latestLink)
+  }
+
+  public func resetInitialAppLink() -> Void {
+    latestLink = nil
   }
 }

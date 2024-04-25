@@ -21,6 +21,10 @@ class AppLinksPluginLinux extends AppLinksPlatform {
     );
   }
 
+  Future<void> resetInitialAppLink() async {
+    return null;
+  }
+
   @override
   Future<String?> getInitialAppLinkString() async {
     return _uris.isNotEmpty ? _uris.first : null;

@@ -83,7 +83,10 @@ public class AppLinksPlugin implements
       result.success(latestLink);
     } else if (call.method.equals("getInitialAppLink")) {
       result.success(initialLink);
-    } else {
+    } else if (call.method.equals("resetInitialAppLink")) {
+      resetInitialAppLink();
+      result.success(null);
+     else {
       result.notImplemented();
     }
   }
@@ -179,6 +182,10 @@ public class AppLinksPlugin implements
     return true;
   }
 
+  public resetInitialAppLink() {
+    initialLink = null;
+    latestLink = null;
+  }
   ///
   /// END AppLinksPlugin
   /////////////////////////////////////////////////////////////////////////////
