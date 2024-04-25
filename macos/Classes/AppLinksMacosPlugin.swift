@@ -37,8 +37,8 @@ public class AppLinksMacosPlugin: NSObject, FlutterPlugin, FlutterStreamHandler,
         result(latestLink)
         break      
       case "resetInitialAppLink":
-        resetInitialAppLink()
-        result(nil)
+        var res = resetInitialAppLink()
+        result(res)
       default:
         result(FlutterMethodNotImplemented)
         break
@@ -81,7 +81,9 @@ public class AppLinksMacosPlugin: NSObject, FlutterPlugin, FlutterStreamHandler,
     }    
   }
   
-  public func resetInitialAppLink() -> Void {
+  public func resetInitialAppLink() -> Bool {
     latestLink = nil
+    initialLink = nil
+    return true
   }
 }

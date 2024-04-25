@@ -31,7 +31,6 @@ class AppLinksMethodChannel extends AppLinksPlatform {
   Future<void> resetInitialAppLink() async {
     final link =
         await _method.invokeMethod<String?>(_resetInitialAppLinkMethod);
-    return null;
   }
 
   @override
