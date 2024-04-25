@@ -36,6 +36,9 @@ public class AppLinksMacosPlugin: NSObject, FlutterPlugin, FlutterStreamHandler,
       case "getLatestAppLink":
         result(latestLink)
         break      
+      case "resetInitialAppLink":
+        resetInitialAppLink()
+        result(nil)
       default:
         result(FlutterMethodNotImplemented)
         break
@@ -76,5 +79,9 @@ public class AppLinksMacosPlugin: NSObject, FlutterPlugin, FlutterStreamHandler,
     if let _eventSink = eventSink {
       _eventSink(latestLink)
     }    
+  }
+  
+  public func resetInitialAppLink() -> Void {
+    latestLink = nil
   }
 }

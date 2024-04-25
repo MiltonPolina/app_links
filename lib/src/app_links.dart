@@ -16,6 +16,11 @@ class AppLinks extends AppLinksPlatform {
   }
 
   @override
+  Future<void> resetInitialAppLink() {
+    return AppLinksPlatform.instance.resetInitialAppLink();
+  }
+
+  @override
   Future<String?> getInitialAppLinkString() async {
     return AppLinksPlatform.instance.getInitialAppLinkString();
   }
