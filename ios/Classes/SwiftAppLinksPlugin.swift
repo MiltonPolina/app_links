@@ -121,9 +121,8 @@ public final class SwiftAppLinksPlugin: NSObject, FlutterPlugin, FlutterStreamHa
     _eventSink(latestLink)
   }
 
-   public func resetInitialAppLink() -> Bool {
+   public func resetInitialAppLink() -> Void {
     latestLink = nil
     initialLink = nil
-    return true
   }
 }
