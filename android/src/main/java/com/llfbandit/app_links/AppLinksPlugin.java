@@ -184,7 +184,7 @@ public class AppLinksPlugin implements
     return true;
   }
 
-  public resetInitialAppLink() {
+  public void resetInitialAppLink() {
     initialLink = null;
     latestLink = null;
   }
