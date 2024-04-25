@@ -31,8 +31,8 @@ public final class SwiftAppLinksPlugin: NSObject, FlutterPlugin, FlutterStreamHa
     case "getLatestAppLink":
       result(latestLink)
     case "resetInitialAppLink":
-      let result = resetInitialAppLink()
-      result(result)
+      resetInitialAppLink()
+      result(nil)
     default:
       result(FlutterMethodNotImplemented)
     }
