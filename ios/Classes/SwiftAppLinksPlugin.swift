@@ -123,5 +123,6 @@ public final class SwiftAppLinksPlugin: NSObject, FlutterPlugin, FlutterStreamHa
 
    public func resetInitialAppLink() -> Void {
     latestLink = nil
+    initialLink = nil
   }
 }
